@@ -1,18 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>contact-us</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <main class="contact_wrapper">
-        <div class="contact_form">
-            <h2>contact us</h2>
-        </div>
-    </main>
-    
-</body>
+        <title>contact-us</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <main class="contact_wrapper">
+            <div class="contact_form">
+                <h2 class="form_title">contact us</h2>
+                <form action="" class="form-login">
+                    <div class="row_form">
+                        <div class="input_form">
+                            <label for="first_name" class="lable">first name
+                            </label>
+                            <input type="text" id="first_name" required="required" class="input">
+                            <span id="first_name_error" class="error-message"></span>
+                        </div>
+                        <div class="input_form">
+                            <label for="last_name" class="lable">last name</label>
+                            <input type="text" id="last_name" required="required">
+                            <span id="last_name_error" class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="input_form">
+                        <label for="email" class="lable">email address</label>
+                        <input type="text" id="email" required="required" class="input">
+                        <span id="email_error" class="error-message"></span>
+                    </div>
+
+                    <div class="input_form">
+                        <label for="query">query type</label>
+                        <div class="row_form">
+                            <div class="radio_type">
+                                <input type="radio" name="option" id="option1">
+                                <label for="option1">general inquiry</label>
+                            </div>
+                            <div class="radio_type">
+                                <input type="radio" name="option" id="option2">
+                                <label for="option2">
+                                    support request</label>
+                            </div>
+
+                        </div>
+                        <span id="query_error" class="error-message"></span>
+                    </div>
+                    <div class="input_form">
+                        <label for="message" class="lable">message
+                        </label>
+                        <textarea name="textarea" id="message" rows="5"></textarea>
+                        <span id="message_error" class="error-message"></span>
+                    </div>
+                    <div class="checkbox_type">
+                        <input type="checkbox" id="agree" name="Agree"/>
+                        <label for="agree">I consent to being contacted by the theme</label>
+                        <span id="agree-error" class="error-message"></span>
+                    </div>
+                    <div class="input_form">
+                        <input type="button" value="submit" class="submit_btn">
+                    </div>
+
+                </form>
+            </div>
+
+        </main>
+
+    </body>
 </html>

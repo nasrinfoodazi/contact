@@ -6,6 +6,7 @@
 :root {
     --green-200: hsl(148, 38%, 91%);
     --green-600: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
     --White: hsl(0, 0%, 100%);
     --Grey-500: hsl(186, 15%, 59%);
     --Grey-900: hsl(187, 24%, 22%);
@@ -15,23 +16,116 @@
     src: url("../fonts/Karla-VariableFont_wght.ttf");
 }
 body {
-    
+
     font-family: "karla";
-    color: var(--green-600);
+
 }
-.contact_wrapper{
-  padding: 40px 0;
+.contact_wrapper {
+    min-width: 1440px;
+    margin: auto;
+    padding: 40px 10px;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     background-color: var(--green-200);
-    border: 1px solid #000;
 }
-.contact_form{
+.contact_form {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
     background-color: var(--White);
     border-radius: 10px;
-    min-width: 700px;
+
+}
+.form_title {
+    color: var(--Grey-900);
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.form-login .row_form {
+    display: flex;
+    gap:0rem 1rem;
+
+}
+.row_form .input_form input{
+    width: 400px;
+}
+.input_form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+ label {
+    display: inline-block;
+    color: var(--Grey-900);
+    font-size: 16px;
+    position: relative;
+    text-transform: capitalize;
+
+}
+.label{
+    margin-bottom: 1rem;
+}
+label::after{
+    content: " * ";
+    color: var(--green-600);
+    position: absolute;
+    font-size: 1.2rem;
+    top:-10px;
+}
+.input_form > input
+,.radio_type{
+    padding: 15px 20px;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    border:1px solid var(--Grey-500);
+    margin-top: .5rem;
+}
+.radio_type >.label,
+.checkbox_type >label{
+    margin-left: .5rem;
+
+}
+.radio_type >label::after{
+    display: none;
+}
+input:focus{
+    border-color:var(--green-600);
+    border-width: 2px;
+}
+.error-message{
+    color: var(--Red);
+    font-size: 14px;
+    margin:10px 0;
+}
+#message{
+    min-height: 100px;
+    border:1px solid var(--Grey-500);
+    border-radius: 5px;
+    margin-top: .5rem;
+    
+
+}
+.submit_btn{
+    background-color: var(--green-600);
+    border: none;
+    outline: none;
+    color: var(--White);
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: "karla";   
+}
+.checkbox_type{
+    margin: 1rem 0;
+}
+@media (max-width :375px){
+    .form-login .row_form {
+        display: flex;
+        flex-direction: column;
+    
+    }
 }
